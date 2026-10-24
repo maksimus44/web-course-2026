@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг — Услуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="logo">BrandName</div>
+        
+        <!-- Навигация (на мобилках превращается в гамбургер) -->
+        <nav class="nav">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-list">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Герой-секция (Hero) -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Мы создаем крутые сайты</h1>
+                <p>Современные решения для вашего бизнеса. Быстро, качественно, надежно.</p>
+                <button class="btn-primary">Узнать больше</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Разработка">
+            </div>
+        </section>
+
+        <!-- Блок услуг (Карточки) -->
+        <section id="services" class="services">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <article class="card">
+                    <h3>Веб-разработка</h3>
+                    <p>Создаем сайты любой сложности с нуля или на конструкторах.</p>
+                </article>
+                <article class="card">
+                    <h3>Дизайн</h3>
+                    <p>Разрабатываем уникальные интерфейсы, которые удобны пользователям.</p>
+                </article>
+                <article class="card">
+                    <h3>SEO-продвижение</h3>
+                    <p>Помогаем вашему сайту выйти в топ поисковых систем.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Форма обратной связи -->
+        <section id="contact" class="contact">
+            <h2>Свяжитесь с нами</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <p>&copy; 2026 BrandName. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>

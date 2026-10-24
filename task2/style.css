@@ -1,0 +1,308 @@
+/* =========================================
+   БАЗОВЫЕ СТИЛИ (MOBILE FIRST - до 767px)
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* --- Шапка (Flexbox) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Гамбургер-меню (скрываем чекбокс) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px; /* Чтобы область клика была больше 44px */
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s; /* Плавный переход */
+}
+
+/* Навигация на мобильных (скрыта по умолчанию) */
+.nav-list {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    list-style: none;
+}
+
+/* Магия CSS: при клике на чекбокс показываем меню */
+.menu-toggle:checked ~ .nav-list {
+    display: flex;
+}
+
+.nav-list li {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* --- Основной контент --- */
+main {
+    /* Главная сетка страницы (Grid) */
+    display: grid;
+    grid-template-columns: 1fr; /* На мобильном одна колонка */
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Герой-секция (Flexbox) --- */
+.hero {
+    display: flex;
+    flex-direction: column-reverse; /* Картинка сверху, текст снизу на мобилке */
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Плавный переход */
+    min-height: 44px; /* Touch-friendly */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* --- Услуги (Grid) --- */
+.services h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка на мобильном */
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease; /* Плавный переход */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Увеличение карточки при наведении */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+/* --- Форма (Flexbox) --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: 500;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    min-height: 44px; /* Touch-friendly */
+}
+
+/* Состояние :focus для полей */
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+.btn-submit {
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-height: 44px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* --- Футер --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* =========================================
+   ПЛАНШЕТ (от 768px до 1199px)
+   ========================================= */
+@media (min-width: 768px) {
+    /* Меню возвращается в строку, гамбургер скрывается */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex !important; /* Принудительно показываем */
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+        background: transparent;
+        width: auto;
+        gap: 20px;
+    }
+
+    .nav-list li {
+        margin-bottom: 0;
+    }
+
+    /* Сетка: 2 колонки для карточек */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Герой-секция: текст слева, картинка справа */
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-content, .hero-image {
+        flex: 1;
+    }
+
+    /* Форма: поля Имя и Email в один ряд */
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .form-group:nth-child(3), 
+    .btn-submit {
+        grid-column: span 2; /* Сообщение и кнопка на всю ширину */
+    }
+}
+
+/* =========================================
+   ДЕСКТОП (от 1200px)
+   ========================================= */
+@media (min-width: 1200px) {
+    /* Сетка: 3 колонки для карточек */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    /* На десктопе можно сделать форму в 3 колонки или оставить как есть */
+    .contact {
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
