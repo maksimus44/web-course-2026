@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Резюме — Валерий Меладзе</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Шапка -->
+    <header class="header">
+        <div class="header-info">
+            <h1>Валерий Меладзе</h1>
+            <p class="job-title">Народный артист РФ, Певец и Продюсер</p>
+            <p class="slogan">Музыка — это язык, на котором говорит душа.</p>
+        </div>
+        <!-- 2. Фотография (заглушка) -->
+        <img src="https://i.pravatar.cc/300" alt="Фото Валерия Меладзе" class="avatar">
+    </header>
+
+    <!-- 7. Навигация -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#education">Образование</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        
+        <!-- 3. Блок "О себе" -->
+        <section id="about" class="section">
+            <h2>О себе</h2>
+            <article>
+                <p>Валерий Шотаевич Меладзе — советский и российский эстрадный певец, продюсер, заслуженный и народный артист РФ. Начал свой путь не с музыки, а с инженерии, но любовь к сцене оказалась сильнее.</p>
+                <p>Обладатель уникального бархатного баритона. За свою карьеру выпустил более 10 студийных альбомов и дал тысячи концертов по всему миру.</p>
+                <p>В свободное время занимается благотворительностью, пишет стихи и поддерживает молодые таланты.</p>
+            </article>
+        </section>
+
+        <!-- 4. Блок "Образование" -->
+        <section id="education" class="section">
+            <h2>Образование</h2>
+            <ul class="education-list">
+                <li>
+                    <strong>Николаевский кораблестроительный институт</strong> — Инженер-механик<br>
+                    <span class="years">1984 — 1989</span>
+                </li>
+                <li>
+                    <strong>Музыкальное училище</strong> — Вокальное искусство<br>
+                    <span class="years">1990 — 1992</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 5. Блок "Навыки" -->
+        <section id="skills" class="section">
+            <h2>Навыки</h2>
+            <div class="skills-container">
+                <span class="skill">Вокал (Баритон)</span>
+                <span class="skill">Продюсирование</span>
+                <span class="skill">Написание песен</span>
+                <span class="skill">Сценическая речь</span>
+                <span class="skill">Игра на гитаре</span>
+                <span class="skill">Актерское мастерство</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. Блок "Контакты" -->
+    <footer id="contacts" class="footer">
+        <h2>Контакты</h2>
+        <div class="contact-links">
+            <a href="mailto:valery@example.com" class="contact-btn">📧 Написать Email</a>
+            <a href="https://github.com/username" target="_blank" rel="noopener" class="contact-btn">💻 Соцсети</a>
+            <a href="tel:+79991234567" class="contact-btn">📞 Позвонить</a>
+        </div>
+    </footer>
+
+</body>
+</html>

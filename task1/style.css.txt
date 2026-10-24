@@ -1,0 +1,168 @@
+/* Глобальный сброс и box-sizing (требование задания) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Flexbox для центрирования всей страницы --- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+/* Ограничиваем ширину контента */
+header, nav, main, footer {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* --- 1. Шапка (Flexbox) --- */
+.header {
+    display: flex;
+    justify-content: space-between; /* Требование: justify-content */
+    align-items: center;           /* Требование: align-items */
+    padding: 30px 40px;
+    gap: 20px;                     /* Требование: gap */
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;        /* Требование: flex-direction */
+    gap: 8px;
+}
+
+.job-title {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.slogan {
+    color: #666;
+    font-style: italic;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+}
+
+/* --- 7. Навигация --- */
+.nav {
+    padding: 15px 40px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #007bff;
+}
+
+/* --- Основной контент --- */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 40px; /* Отступы между секциями */
+}
+
+.section h2, .footer h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+/* --- 4. Образование --- */
+.education-list {
+    list-style-type: none;
+}
+
+.education-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 3px solid #007bff;
+}
+
+.years {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- 5. Навыки (Flexbox + flex-wrap) --- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;              /* Требование: flex-wrap */
+    gap: 10px;
+}
+
+.skill {
+    background-color: #e3f2fd;
+    color: #0056b3;
+    padding: 8px 16px;
+    border-radius: 20px; /* Делает "пилюлю" */
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid #b3e5fc;
+}
+
+/* --- 6. Контакты (Footer) --- */
+.footer {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.contact-btn {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Требование: ховер-эффект для ссылок */
+.contact-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: underline; /* Смена цвета и подчеркивание */
+}
