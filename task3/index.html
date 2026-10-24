@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач (To-Do)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем скрипт с атрибутом defer, как требуется в задании -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+        <h1>Мои задачи</h1>
+
+        <!-- Поле ввода и кнопка добавления -->
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="Что нужно сделать?">
+            <button id="add-btn">Добавить</button>
+        </div>
+
+        <!-- Счётчик -->
+        <div class="stats">
+            <span id="counter">Осталось: 0, Выполнено: 0</span>
+        </div>
+
+        <!-- Фильтры -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершённые</button>
+        </div>
+
+        <!-- Список задач (сюда JS будет вставлять элементы) -->
+        <ul id="task-list" class="task-list"></ul>
+        
+        <!-- Блок для вывода предупреждения, если поле пустое -->
+        <p id="error-msg" class="error-msg"></p>
+    </main>
+
+</body>
+</html>
