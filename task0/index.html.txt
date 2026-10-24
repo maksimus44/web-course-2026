@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head><title>Курс JS</title></head>
+<body>
+    <h1>Курс JS — Курганов Максим Егорович</h1>
+</body>
+</html>
